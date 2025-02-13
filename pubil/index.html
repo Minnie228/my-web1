@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="zh">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>🎵🎀💕</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <!-- 密码验证 -->
+    <div id="passwordPrompt">
+        <h2>请输入密码访问小天地</h2>
+        <input type="password" id="passwordInput" placeholder="输入密码">
+        <button onclick="checkPassword()">进入</button>
+        <p id="passwordError" style="color: red;"></p>
+    </div>
+
+    <!-- 网站内容 -->
+    <div id="content">
+        <h1>💕 🎵 🎀 🌊 🦋 💕</h1>
+
+        <!-- 背景音乐 -->
+        <audio id="bgMusic" loop>
+            <source src="恶作剧 2.m4a" type="audio/mpeg">
+            您的浏览器不支持音频播放。
+        </audio>
+        <button id="playMusic" onclick="toggleMusic()">🎵 播放音乐</button>
+
+        <!-- 便签 -->
+        <div class="container">
+            <h2>📝 日常记录</h2>
+            <input type="text" id="noteInput" placeholder="输入内容">
+            <button onclick="saveNote()">添加</button>
+            <ul id="noteList"></ul>
+        </div>
+
+        <!-- 见面倒计时 -->
+        <div class="container">
+            <h2>⏳ 见面倒计时</h2>
+            <p id="countdown">请设定见面日期</p>
+            <input type="date" id="meetDate">
+            <button onclick="startCountdown()">设定</button>
+            <button onclick="resetCountdown()">重置</button>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
